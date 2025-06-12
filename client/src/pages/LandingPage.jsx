@@ -39,42 +39,50 @@ const LandingPage = () => {
         {
             name: 'Chicken Biryani',
             image: 'https://www.licious.in/blog/wp-content/uploads/2022/06/chicken-hyderabadi-biryani-01-750x750.jpg',
-            court: 'FC'
+            court: 'FC',
+            category: 'Biryanis & Meals'
         },
         {
             name: 'Fried Rice',
             image: 'https://images.getrecipekit.com/20220904015448-veg-20fried-20rice.png?aspect_ratio=4:3&quality=90&',
-            court: 'CFC'
+            court: 'CFC',
+            category: 'Noodles & Fried Rice'
         },
         {
             name: 'Pizza',
             image: 'https://eggs.ca/wp-content/uploads/2024/06/EFC-pizza-with-eggs-1280x720-1.jpg',
-            court: 'FC'
+            court: 'FC',
+            category: 'Snacks / Sides'
         },
         {
             name: 'Maggi',
             image: 'https://www.nestlerecipescaribbean.com/sites/default/files/styles/recipe_detail_desktop_new/public/srh_recipes/81f0d6debddc801fabebec956cd0312d.jpg?itok=l-7yNDL2',
-            court: 'FC'
+            court: 'FC',
+            category: 'Snacks / Sides'
         },
         {
             name: 'Parota',
             image: 'https://media.istockphoto.com/id/1205482203/photo/kerala-parotta-popularly-known-as-paratha-or-porotta-is-a-delicacy-from-the-state-of-kerala.jpg?s=612x612&w=0&k=20&c=Yv6GQkzNErLM7NUA4q6S27FnFMT7yuC6RSCij5e2m0Y=',
-            court: 'CFC'
+            court: 'CFC',
+            category: 'Breakfast Items'
         },
         {
             name: 'Chapati',
             image: 'https://img.freepik.com/premium-photo/indian-mixed-veg-containing-potato-beans-with-traditional-masala-curry-served-with-chapati-roti-indian-flat-bread_466689-48430.jpg',
-            court: 'FC'
+            court: 'FC',
+            category: 'Veg Specials & Curries'
         },
         {
             name: 'Ice Cream',
             image: 'https://funcakes.com/content/uploads/2023/06/Ice-cream-recipe-600x450.webp',
-            court: 'Yummpys'
+            court: 'Yummmpys',
+            category: 'Beverages'
         },
         {
             name: 'Dosa',
             image: 'https://vismaifood.com/storage/app/uploads/public/8b4/19e/427/thumb__1200_0_0_0_auto.jpg',
-            court: 'CFC'
+            court: 'CFC',
+            category: 'Breakfast Items'
         }
     ];
 
@@ -198,7 +206,8 @@ const LandingPage = () => {
                                     </div>
 
                                     <Link
-                                        to={`/court/${court.id}`}
+                                        to="/home"
+                                        state={{ selectedCourt: court }}
                                         className="w-full bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center block"
                                     >
                                         View Menu
@@ -247,10 +256,13 @@ const LandingPage = () => {
                                     </div>
                                 </div>
 
-                                <div className="p-4 flex-grow flex items-center justify-center">
+                                <div className="p-4 flex flex-col items-center justify-center">
                                     <h3 className="font-semibold text-gray-800 text-center">
                                         {item.name}
                                     </h3>
+                                    <p className="text-sm text-gray-600 mt-1">
+                                        {item.category}
+                                    </p>
                                 </div>
                             </motion.div>
                         ))}

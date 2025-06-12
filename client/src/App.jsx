@@ -8,6 +8,7 @@ import AdminPanel from './pages/admin/AdminPanel';
 import RestaurantLogin from './pages/admin/RestaurantLogin';
 import AdminLogin from './pages/admin/AdminLogin';
 import UserDashboard from './pages/UserDashboard';
+import HomePage from './pages/HomePage';
 import About from './pages/About';
 import './index.css';
 import ScrollToTop from './components/ScrollToTop';
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/about" element={<About />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
