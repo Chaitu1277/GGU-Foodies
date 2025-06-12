@@ -11,60 +11,70 @@ const LandingPage = () => {
     const foodCourts = [
         {
             id: 1,
-            name: 'CFC (Chicken Food Court)',
-            description: 'Specializing in crispy fried chicken, burgers, and mouth-watering chicken delicacies.',
-            image: 'https://images.pexels.com/photos/2347311/pexels-photo-2347311.jpeg?auto=compress&cs=tinysrgb&w=500',
+            name: 'CFC (Central Food Court)',
+            description: 'A vibrant dining hub offering a variety of delicious cuisines from multiple food vendors in one convenient location.',
+            image: 'https://media.istockphoto.com/id/828531982/photo/food-court-market.jpg?s=612x612&w=0&k=20&c=ftIm-Xc9MJ5xxz6xSHWSE42Fa8HbnudjzPPyep-EujI=',
             rating: 4.5,
-            specialties: ['Fried Chicken', 'Burgers', 'Wings', 'Sandwiches']
+            specialties: ['Chapathi', 'Bread Omlette', 'Parota', 'Chicken Noddles']
         },
         {
             id: 2,
-            name: 'Food Court (FC)',
-            description: 'A diverse selection of Indian and international cuisines to satisfy every craving.',
-            image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=500',
+            name: 'FC (Food Court)',
+            description: 'A vibrant dining hub offering a variety of delicious cuisines from multiple food vendors in one convenient location.',
+            image: 'https://blogshalog.com/wp-content/uploads/2024/01/Food-Court-Journey-into-the-Flavorful-Cosmos.jpeg',
             rating: 4.3,
-            specialties: ['North Indian', 'South Indian', 'Chinese', 'Continental']
+            specialties: ['Chicken Biryani', 'Bread Omlette', 'Panner Fried Rice', 'Mughalai Biryani']
         },
         {
             id: 3,
-            name: 'Yummmies',
-            description: 'Sweet treats, desserts, and refreshing beverages to make your day sweeter.',
-            image: 'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg?auto=compress&cs=tinysrgb&w=500',
+            name: 'Yummmpys Food Court',
+            description: 'A vibrant dining hub offering a variety of delicious cuisines from multiple food vendors in one convenient location.',
+            image: 'https://aerohub.in/wp-content/uploads/2024/08/Aerohub-Food-Court.jpg',
             rating: 4.7,
-            specialties: ['Desserts', 'Ice Cream', 'Beverages', 'Pastries']
+            specialties: ['Chicken Biryani', 'Masala Maggi', 'Ice Cream', 'Veg Fried Rice']
         }
     ];
 
     const popularItems = [
         {
             name: 'Chicken Biryani',
-            image: 'https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=300',
-            price: '₹199',
+            image: 'https://www.licious.in/blog/wp-content/uploads/2022/06/chicken-hyderabadi-biryani-01-750x750.jpg',
             court: 'FC'
         },
         {
-            name: 'Veg Fried Rice',
-            image: 'https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg?auto=compress&cs=tinysrgb&w=300',
-            price: '₹129',
+            name: 'Fried Rice',
+            image: 'https://images.getrecipekit.com/20220904015448-veg-20fried-20rice.png?aspect_ratio=4:3&quality=90&',
+            court: 'CFC'
+        },
+        {
+            name: 'Pizza',
+            image: 'https://eggs.ca/wp-content/uploads/2024/06/EFC-pizza-with-eggs-1280x720-1.jpg',
             court: 'FC'
         },
         {
-            name: 'Paneer Pizza',
-            image: 'https://images.pexels.com/photos/1260968/pexels-photo-1260968.jpeg?auto=compress&cs=tinysrgb&w=300',
-            price: '₹179',
+            name: 'Maggi',
+            image: 'https://www.nestlerecipescaribbean.com/sites/default/files/styles/recipe_detail_desktop_new/public/srh_recipes/81f0d6debddc801fabebec956cd0312d.jpg?itok=l-7yNDL2',
             court: 'FC'
         },
         {
-            name: 'Masala Maggi',
-            image: 'https://images.pexels.com/photos/12737666/pexels-photo-12737666.jpeg?auto=compress&cs=tinysrgb&w=300',
-            price: '₹69',
+            name: 'Parota',
+            image: 'https://media.istockphoto.com/id/1205482203/photo/kerala-parotta-popularly-known-as-paratha-or-porotta-is-a-delicacy-from-the-state-of-kerala.jpg?s=612x612&w=0&k=20&c=Yv6GQkzNErLM7NUA4q6S27FnFMT7yuC6RSCij5e2m0Y=',
+            court: 'CFC'
+        },
+        {
+            name: 'Chapati',
+            image: 'https://img.freepik.com/premium-photo/indian-mixed-veg-containing-potato-beans-with-traditional-masala-curry-served-with-chapati-roti-indian-flat-bread_466689-48430.jpg',
             court: 'FC'
         },
         {
-            name: 'Mango Ice Cream',
-            image: 'https://images.pexels.com/photos/7474412/pexels-photo-7474412.jpeg?auto=compress&cs=tinysrgb&w=300',
-            price: '₹99',
-            court: 'Yummmies'
+            name: 'Ice Cream',
+            image: 'https://funcakes.com/content/uploads/2023/06/Ice-cream-recipe-600x450.webp',
+            court: 'Yummpys'
+        },
+        {
+            name: 'Dosa',
+            image: 'https://vismaifood.com/storage/app/uploads/public/8b4/19e/427/thumb__1200_0_0_0_auto.jpg',
+            court: 'CFC'
         }
     ];
 
@@ -129,7 +139,7 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            {/* Food Courts Section */}
+            {/* Restaurants Section */}
             <section id="food-courts" className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
@@ -139,7 +149,7 @@ const LandingPage = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-800 mb-4">
-                            Our Food Courts
+                            Food Courts
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Discover the diverse culinary landscape at GGU with our three premier food courts,
@@ -224,31 +234,23 @@ const LandingPage = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className="card overflow-hidden group hover:shadow-lg transition-shadow duration-300"
+                                className="card w-full h-[300px] flex flex-col justify-between overflow-hidden group hover:shadow-lg transition-shadow duration-300"
                             >
-                                <div className="relative overflow-hidden">
+                                <div className="relative w-full h-[200px] flex-shrink-0">
                                     <img
                                         src={item.image}
                                         alt={item.name}
-                                        className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-300"
+                                        className="w-full h-full object-cover transition-transform duration-300"
                                     />
                                     <div className="absolute top-2 left-2 bg-primary-600 text-white px-2 py-1 rounded text-xs">
                                         {item.court}
                                     </div>
                                 </div>
 
-                                <div className="p-4">
-                                    <h3 className="font-semibold text-gray-800 mb-2">
+                                <div className="p-4 flex-grow flex items-center justify-center">
+                                    <h3 className="font-semibold text-gray-800 text-center">
                                         {item.name}
                                     </h3>
-                                    <div className="flex justify-between items-center">
-                                        <span className="text-lg font-bold text-primary-600">
-                                            {item.price}
-                                        </span>
-                                        <button className="bg-primary-600 hover:bg-primary-700 text-white px-3 py-1 rounded text-sm transition-colors">
-                                            Add to Cart
-                                        </button>
-                                    </div>
                                 </div>
                             </motion.div>
                         ))}
